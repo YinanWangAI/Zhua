@@ -6,12 +6,12 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-class TechcrunchPipeline(object):
+class Crawl36KrPipeline(object):
+
     def __init__(self):
-        self.f = open("item_techcrunch.csv", "w", encoding="utf-8")
+        self.f = open("item_36kr.csv", "w", encoding="utf-8")
 
     def process_item(self, item, spider):
         item = dict(item)
-        line = item["date"] + ',"' + item["title"] + '",' + \
-               item["url"] + '\n'
+        line = '"' + item["title"][0] + '",' + item["url"] + '\n'
         self.f.write(line)

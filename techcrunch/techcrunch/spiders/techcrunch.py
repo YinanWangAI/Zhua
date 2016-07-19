@@ -8,7 +8,7 @@ from techcrunch.items import TechcrunchItem
 
 class TechcrunchSpider(scrapy.Spider):
     """A spider to crawl techcrunch.cn"""
-    name = "TechCrunch"
+    name = "techcrunch"
     allowed_domains = ["techcrunch.cn/"]
     start_urls = (
         'http://techcrunch.cn/%E6%96%B0%E9%97%BB/',
